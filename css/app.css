@@ -1,0 +1,21 @@
+body {
+	margin: 0;
+}
+
+#webviewdummy {
+	display: none;
+}
+
+/*div#doc.route-home {
+	display: block !important;
+}
+
+.DMActivity {
+  border-radius: 0 !important;
+	min-height: 100vh !important;
+	height: 100vh !important;
+	min-width: 100vw !important;
+  width: 100vw !important;
+  max-width: 100vw !important;
+	z-index: 99999 !important;
+}*/
