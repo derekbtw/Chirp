@@ -1,13 +1,11 @@
 window.onresize = reLayout;
 var unread = 0;
 
-
 function getWebView() {
     if (!getWebView.view)
         getWebView.view = document.querySelector('webview');
     return getWebView.view;
 }
-
 
 onload = function() {
     var webview = getWebView();
@@ -37,13 +35,11 @@ onload = function() {
     };*/
 };
 
-
 function reLayout() {
     var webview = getWebView();
     webview.style.width = document.documentElement.clientWidth + 'px';
     webview.style.height = document.documentElement.clientHeight + 'px';
 }
-
 
 function injectJS() {
     var webview = getWebView();
@@ -53,7 +49,6 @@ function injectJS() {
         webview.contentWindow.postMessage('setup', '*');
     });
 }
-
 
 function onWebViewMessage(msg) {
     var data = msg.data;
@@ -75,7 +70,6 @@ function onWebViewMessage(msg) {
     }
 }
 
-
 function handleKeyDown(event) {
     if (event.ctrlKey) {
         switch (event.keyCode) {
@@ -91,13 +85,11 @@ function handleKeyDown(event) {
     }
 }
 
-
 function updateTitle() {
     var appname = chrome.runtime.getManifest()
         .name;
     document.title = appname + (unread ? ' (' + unread + ')' : '');
 }
-
 
 function repaintWorkaround() {
     window.setTimeout(function() {
